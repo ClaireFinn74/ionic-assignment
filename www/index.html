@@ -1,34 +1,327 @@
 <!DOCTYPE html>
-<html>
+ <html>
   <head>
-    <meta charset="utf-8">
+       <h1 class="title">Calorific</h1>
+     
+<meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-app="calorific">
+    <script type="text/javascript">
+      angular.module('ionic-navview', ['ionic'])
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Calorific</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+      .config(function($stateProvider, $urlRouterProvider) {
+
+
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+
+        .state('state1', {
+          url: '/',
+          templateUrl: 'state1.html'
+        })
+
+        .state('state2', {
+          url: '/state2',
+          templateUrl: 'state2.html'
+        })
+	.state('state3', {
+          url: '/state3',
+          templateUrl: 'state3.html'
+        })
+
+	.state('state4', {
+          url: '/state4',
+          templateUrl: 'state4.html'
+        })
+
+.state('state5', {
+          url: '/state5',
+          templateUrl: 'state5.html'
+        });
+
+})
+    </script>
+
+  </head>
+  <body ng-app="ionic-navview">
+    <ion-nav-view>
+    </ion-nav-view>
+
+    <script type="text/ng-template" id="state1.html">
+      <ion-view view-title="Home">
+        <ion-content>
+          <h3>Typical Everyday Student menu!</h3>
+          <a href="#/state2">Go to next suggetion.</a>
+        <div class="item item-divider">
+	<h3> Breakfast </h3>
+	Nothing
+	</div>
+	<div class="item item-divider">
+	<h3> Lunch </h3>
+	Chicken curry and chips
+	</div>
+	<div class="item item-divider">
+        <h3> Dinner </h3>
+	Pasta
+	</div>
+	 <div class="item item-divider">        
+	<h3> Beverages </h3>
+	 Coca Cola
+	  </div>
+	
+
+	<div class="card card-calm">
+	<div class="item item-divider">
+	
+	<h3> Breakfast </h3>
+        <br> Apple </br>
+	Plain yogurt
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        <br> Vegetable soup </br>
+	<br> Wholemeal Brown Bread </br>
+	<br> Granola bar </br>
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+       <br> Boiled Chicken </br>
+       <br> Mixed veg </br>
+       <br> Potatoes </br>
+	</div>
+         <div class="item item-divider">
+	<h3> Beverages </h3>
+        <br> Orange Juice-Breakfast </br>
+	<br> Water-Lunch </br>
+	<br> Milk-Dinner </br>
+	<br> Green Tea-Optional Extra </br>
+	</div>
+</div>	
+	</ion-content>
+      </ion-view>
+    </script>
+
+    <script type="text/ng-template" id="state2.html">
+      <ion-view view-title="Two">
+        <ion-content>
+          <h3>Typical Everyday Student menu 2!</h3>
+   <a href="#/state3">Go to next suggestion.</a>
+        <div class="item item-divider">
+        <h3> Breakfast </h3>
+        Cocopops bar
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Chicken fillet roll
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Pizza and wedges
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Tea
+         Energy Drink
+          </div>
+
+
+        <div class="card card-calm">
+        <div class="item item-divider">
+
+        <h3> Breakfast </h3>
+        Oatmeal Granola Bar
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Pick and mix salad
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Homemade vegetarian Pizza
+	Homemade baked potatoe wedges
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Green Tea-Lunch
+         Water-Dinner
+         Optional extra-Smoothie rather than energy drink!
+        </div>
+</div>
+        </ion-content>
+      </ion-view>      
+ </script>
+
+	<script type="text/ng-template" id="state3.html">
+      <ion-view view-title="Two">
+        <ion-content>
+           <h3>Typical Everyday Student menu 3!</h3>
+   <a href="#/state4">Go to next suggestion.</a>
+<div class="item item-divider">
+        <h3> Breakfast </h3>
+        Cookie crisp cereal
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        20c Noodles
+	Jaffa Cakes
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Chicken Nuggets
+	Wedges
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Coffee-Lunch
+	 My Wadi Orange Juice-Dinner
+          </div>
+
+
+        <div class="card card-calm">
+        <div class="item item-divider">
+
+        <h3> Breakfast </h3>
+        All Bran Cereal
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Hard boiled egg on rice crackers
+	Green Apple
+	Natural Yogurt
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Wholegrain pasta with Hollandaise Sauce
+	Salmon
+	Broccolli 
+	Peas
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Orange Juice-Breakfast
+         Water-Lunch
+         Milk-Dinner
+         Green Tea-Optional Extra
+        </div>
+</div>
+     </ion-content>
+      </ion-view>
+   
+
+</script>
+<script type="text/ng-template" id="state4.html">
+      <ion-view view-title="Two">
+        <ion-content>
+          <h3>Typical Everyday Student menu 4!</h3>
+   <a href="#/state5">Go to next suggestion.</a>
+
+        <div class="item item-divider">
+        <h3> Breakfast </h3>
+        Peanut Butter Jelly Wrap
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Brownie
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Microwavable burger
+	Onion Rings
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Hot Chocolate-Lunch
+	 7-UP-Dinner
+          </div>
+
+
+        <div class="card card-calm">
+        <div class="item item-divider">
+
+        <h3> Breakfast </h3>
+        Porridge alongside chopped bannanas
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Nutmix or trailmix
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+       	Bacon
+	Cabbage
+	Potatoes
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+        Protien shake-Dinner
+	 Smoothie-Lunch
+        </div>
+</div>
+  
+</ion-content>
+      </ion-view>
+
+</script>
+
+<script type="text/ng-template" id="state5.html">
+      <ion-view view-title="Two">
+        <ion-content>
+          <h3>Typical Everyday Student menu 5!</h3>
+
+        <div class="item item-divider">
+        <h3> Breakfast </h3>
+        Nutella Toast
+	 </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Bag of Chrips
+	Bar of chocolate
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Ready made Shepards pie
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Latte and 2 tablespoons of sugar-Breakfast
+	 Yazoo Milk-Dinner
+          </div>
+
+
+        <div class="card card-calm">
+        <div class="item item-divider">
+
+        <h3> Breakfast </h3>
+        Wheatabix
+	Strawberries
+        </div>
+        <div class="item item-divider">
+        <h3> Lunch </h3>
+        Hard boiled egg on rice crackers
+	Tuna, Lettuce, tommatoe, sweetcorn sandwich on wholemeal bread
+        </div>
+        <div class="item item-divider">
+        <h3> Dinner </h3>
+        Beef strogonoff
+	Wholegrain Rice
+        </div>
+         <div class="item item-divider">
+        <h3> Beverages </h3>
+         Water-Breakfast
+         Low fat Milk-Dinner
+        </div>
+</div>
+  
+</ion-content>
+      </ion-view>
+    </script>
+
   </body>
+
 </html>

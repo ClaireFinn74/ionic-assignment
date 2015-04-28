@@ -1,76 +1,87 @@
 <!DOCTYPE html>
- <html>
-  <head>
-   <div class="bar bar-header bar-balanced">
-   <button class="button icon ion-navicon"></button>
-      <h1 class="title">Calorific</h1>
-   </div>
+  <html> <!--A tag that starts the HTML editor-->
+  <head> <!--A tag thaat starts the head-->
+  <div class="bar bar-header bar-balanced"> <!--Contains the header and the div class divides it up into a box-->
+   <button class="button icon ion-navicon"></button> <!--A button that contains an icon in the header-->
+      <h1 class="title">Calorific</h1> <!-- The head at the largest size, h1, that puts text in the header-->
+   </div> <!--Ends the divide-->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+    <!--Default text to do the CSS stylesheet code--> 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-
+    <!--Default text to do the JavaScript code-->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="cordova.js"></script>
-
-<!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-
     <script type="text/javascript">
+
+
       angular.module('ionic-navview', ['ionic'])
 
       .config(function($stateProvider, $urlRouterProvider) {
 
 
         $urlRouterProvider.otherwise('/');
-$stateProvider
+
+	<!--Contains the code to make the 5 different pages-->
+	$stateProvider
 
         .state('state1', {
           url: '/',
           templateUrl: 'state1.html'
-        })
+        }) <!--Page 1-->
 
         .state('state2', {
           url: '/state2',
           templateUrl: 'state2.html'
-        })
+        })<!--Page 2-->
         .state('state3', {
           url: '/state3',
           templateUrl: 'state3.html'
-           })
-
+           })<!--Page 3-->
         .state('state4', {
           url: '/state4',
           templateUrl: 'state4.html'
         })
-
         .state('state5', {
           url: '/state5',
- templateUrl: 'state5.html'
-        });
+         templateUrl: 'state5.html'
+        }); <!--Page 5-->
 
 
-})
+}) <!--Ends StateProvider-->
 
-</script>
-</head>
-<body ng-app="ionic-navview">
+	
+	</script>
+	</head> <!--End head here-->
+	
+
+     <!--Starts Body-->
+     <body ng-app="ionic-navview">
     <ion-nav-view>
     </ion-nav-view>
 
+
+    <!--Starts the first page-->
     <script type="text/ng-template" id="state1.html">
-      <ion-view view-title="Home">
-        <ion-content>
-          <br> </br>
+      <ion-view view-title="Home"> <!--Changes the name of the tab on the browser-->
+      <ion-content> <!--Contains content on whole page-->
+          <br> </br> <!--Goes to next line-->
           <h1 style="text-align: center;"> <span style="color: #FF0066;"> Typical Everyday Student menu! </span> </h1>
+	  <!--Starts the heading and moves it to the centre of the page and changes the text to pink-->
           <a href="#/state2">Go to next suggestion.</a>
+	  <!--Links the user to the next page, page 2-->
+
+	<!--Starts the card for the first menu on page 1-->
         <div class="item item-divider">
         <h1> Breakfast</h1>
         Nothing
+	 <!--Puts a button on the page to show the amount of calories within breakfast, has red text or assertive at it is shown, it is aligned to the right of the page 		also-->
          <div class="col text-right"> <button class="button button-small button-assertive"> Calories: N/A </button>
         </div>
         </div>
@@ -91,67 +102,71 @@ $stateProvider
          Coca Cola Can
         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 140 </button>
         </div>
-          </div>
+        </div>
 
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
-
+	<!--Healthy Alternative Menu Page 1-->
+	<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
         <div class="card card-calm">
         <div class="item item-divider">
-
         <h1> Breakfast </h1>
              Pink Lady Apple <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 78 </button>
+	     <!--Same thing as discribed above except the button turns out balanced or green as it is shown here-->
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 78 </button>
         </div>
              Plain Greek yogurt
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Lunch </h1>
         Vegetable soup <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 90 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 90 </button>
         </div>
         Wholemeal Brown Bread </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 88 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 88 </button>
         </div>
         <br> Granola bar </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 140 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 140 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Dinner </h1>
              Boiled Chicken Breast <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 231 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 231 </button>
         </div>
              Mixed veg </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 60 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 60 </button>
         </div>
         </div>
          <div class="item item-divider">
         <h1> Beverages </h1>
              Orange Juice Not from Concentrate-Breakfast <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110 </button>
         </div>
              Water-Lunch <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
- Skimmed Milk-Dinner <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 37 </button>
+             Skimmed Milk-Dinner <br> </br>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 37 </button>
         </div>
              Green Tea-Optional Extra
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
         </div>
 </div>
-        </ion-content>
+        </ion-content> <!--Ends the first page-->
       </ion-view>
+
     </script>
- <script type="text/ng-template" id="state2.html">
- <ion-view view-title="Two">
+
+
+	 <!--Starts Page 2-->
+	 <script type="text/ng-template" id="state2.html">
+         <ion-view view-title="Two">
         <ion-content>
         <br> </br>
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Typical Everyday Student menu 2! </span> </h1>
-   <a href="#/state3">Go to next suggestion.</a>
+        <h1 style="text-align: center;"> <span style="color: #FF0066;"> Typical Everyday Student menu 2! </span> </h1>
+        <a href="#/state3">Go to next suggestion.</a>
         <div class="item item-divider">
         <h1> Breakfast </h1>
         Cocopops bar <br> </br>
@@ -182,52 +197,58 @@ $stateProvider
          <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
         </div>
           </div>
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
- <div class="card card-calm">
+	
+
+	<!--Healthy Alternative Menu Page 2-->
+	<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
+ 	<div class="card card-calm">
         <div class="item item-divider">
         <h1> Breakfast </h1>
              Oatmeal Granola Bar
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 143 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 143 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Lunch </h1>
              Tuna and Sweetcorn Salad
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories:450 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories:450 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Dinner </h1>
              Homemade vegetarian Pizza <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 200 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 200 </button>
         </div>
              Homemade baked potatoe wedges
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 56.7  </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 56.7  </button>
         </div>
         </div>
          <div class="item item-divider">
         <h1> Beverages </h1>
              Green Tea-Lunch <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
              Water-Dinner <br> </br>
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
              Optional extra-Smoothie rather than energy drink!
-             <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 245 </button>
+             <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 245 </button>
         </div>
         </div>
 </div>
-        </ion-content>
+        </ion-content> <!--Ends page 2-->
  </ion-view>
  </script>
- <script type="text/ng-template" id="state3.html">
-      <ion-view view-title="Two">
+
+
+<!--Starts Page 3-->
+	 <script type="text/ng-template" id="state3.html">
+      <ion-view view-title="Three">
         <ion-content>
         <br> </br>
         <h1 style="text-align: center;"> <span style="color: #FF0066;"> Typical Everyday Student menu 3! </span> </h1>
-   <a href="#/state4">Go to next suggestion.</a>
-<div class="item item-divider">
+        <a href="#/state4">Go to next suggestion.</a>
+        <div class="item item-divider">
         <h1> Breakfast </h1>
         Cookie crisp cereal
         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 100 </button>
@@ -252,7 +273,7 @@ $stateProvider
         </div>
         </div>
          <div class="item item-divider">
- <h1>   Beverages </h1>
+        <h1>   Beverages </h1>
         Coffee Black-Lunch <br> </br>
         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 2 </button>
         </div>
@@ -261,70 +282,74 @@ $stateProvider
         </div>
           </div>
 
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
 
+<!--Healthy Alternative menu page 3-->
+<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
         <div class="card card-calm">
         <div class="item item-divider">
 
         <h1> Breakfast </h1>
         Kellogs All Bran Cereal
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 80 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 80 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Lunch </h1>
         Hard boiled egg on rice crackers <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 159 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 159 </button>
         </div>
         Green Apple <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 84 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 84 </button>
         </div>
         Natural Yogurt
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 79 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 79 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Dinner </h1>
         Wholegrain pasta and Hollandaise Sauce <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 386 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 386 </button>
         </div>
         Salmon <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 41  </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 41  </button>
         </div>
         Broccolli  <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 30 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 30 </button>
         </div>
         Peas
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 50 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 50 </button>
         </div>
         </div>
          <div class="item item-divider">
         <h1> Beverages </h1>
          Apple Juice Not From Concentrate-Breakfast <br> </br>
-         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
+         <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110 </button>
         </div>
- <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
+	 <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110 </button>
         </div>
          Water-Lunch <br> </br>
-         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+         <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
          Skimmed Milk-Dinner <br> </br>
-         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 90 </button>
+         <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 90 </button>
         </div>
          Green Tea-Optional Extra
-         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0 </button>
+         <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0 </button>
         </div>
         </div>
 </div>
      </ion-content>
       </ion-view>
 </script>
-<script type="text/ng-template" id="state4.html">
-      <ion-view view-title="Two">
+
+
+<!--Starts Page 4-->
+	<script type="text/ng-template" id="state4.html">
+        <ion-view view-title="Four">
         <ion-content>
-          <br> </br>
+        <br> </br>
         <h1 style="text-align: center;"> <span style="color: #FF0066;"> Typical Everyday Student menu 4! </span> </h1>
-   <a href="#/state5">Go to next suggestion.</a>
+        <a href="#/state5">Go to next suggestion.</a>
 
         <div class="item item-divider">
         <h1> Breakfast </h1>
@@ -356,41 +381,42 @@ $stateProvider
              <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 140 </button>
         </div>
           </div>
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
 
+<!--Healthy Alternative Menu Page 4-->
+	<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
         <div class="card card-calm">
         <div class="item item-divider">
 
         <h1> Breakfast </h1>
         Porridge alongside chopped bannanas
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 180 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 180 </button>
         </div>
  </div>
         <div class="item item-divider">
         <h1> Lunch </h1>
         Nutmix or trailmix
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 150 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 150 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Dinner </h1>
         Bacon <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 106 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 106 </button>
         </div>
         Cabbage <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 13.1 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 13.1 </button>
         </div>
         Potatoes (3 boiled)
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 240 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 240 </button>
         </div>
         </div>
          <div class="item item-divider">
         <h1> Beverages </h1>
         Protien shake (chocolate)-Dinner <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110 </button>
         </div>
         Smoothie-Lunch
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 245 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 245 </button>
         </div>
         </div>
 </div>
@@ -398,8 +424,10 @@ $stateProvider
 </ion-content>
       </ion-view>
 </script>
-<script type="text/ng-template" id="state5.html">
-      <ion-view view-title="Two">
+
+      <!--Starts Page 5, the final Page-->
+      <script type="text/ng-template" id="state5.html">
+      <ion-view view-title="Five">
         <ion-content>
         <br> </br>
 
@@ -434,45 +462,48 @@ $stateProvider
          <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 65 </button>
         </div>
           </div>
- <div class="card card-calm">
+        <div class="card card-calm">
         <div class="item item-divider">
-<h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
+
+
+	<!--Starts Healthy Alternative Menu Page 5-->
+        <h1 style="text-align: center;"> <span style="color: #FF0066;"> Healthy Alternative  menu! </span> </h1>
         <h1> Breakfast </h1>
           Wheatabix <br> </br>
-          <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 205 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 205 </button>
         </div>
           Strawberries
-          <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 48 </button>
+          <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 48 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Lunch </h1>
         Hard boiled egg on rice crackers <br> </br>
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 226 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 226 </button>
         </div>
         Tuna, Lettuce, tomato, sweetcorn sandwich on wholemeal bread
-        <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 220 </button>
+        <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 220 </button>
         </div>
         </div>
         <div class="item item-divider">
         <h1> Dinner </h1>
           Beef strogonoff <br> </br>
-         <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 292 </button>
+         <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 292 </button>
         </div>
          <div class="item item-divider">
         <h1> Beverages </h1>
            Water-Breakfast <br> </br>
-           <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 0  </button>
+           <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 0  </button>
         </div>
            Low fat Milk-Dinner
-           <div class="col text-right"> <button class="button button-small button-assertive"> Calories: 110  </button>
+           <div class="col text-right"> <button class="button button-small button-balanced"> Calories: 110  </button>
         </div>
         </div>
-</div>
-</ion-content>
+       </div>
+     </ion-content>
       </ion-view>
     </script>
-  </body>
 
-</html>
+  </body> <!--Ends the body-->
+</html> <!--Ends the whole Project-->
 
